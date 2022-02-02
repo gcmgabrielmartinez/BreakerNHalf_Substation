@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>SUBESTA&Ccedil;&Atilde;O COM ARRANJO DE BARRAMENTO SIMPLES</title>
+<title>SUBESTA&Ccedil;&Atilde;O COM ARRANJO DE BARRAMENTO DUPLO</title>
 <style type="text/css">
 body {
 	margin-left: 0px;
@@ -59,6 +59,24 @@ a.tit_internarodape:hover{
 	left: 344px;
 	top: 17px;
 }
+#detalhe4 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	visibility: hidden;
+	left: 344px;
+	top: 17px;
+}
+#detalhe5 {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	visibility: hidden;
+	left: 344px;
+	top: 17px;
+}
 </style>
 <style type="text/css">
 a:visited {
@@ -96,7 +114,7 @@ function MM_showHideLayers() { //v9.0
 </script>
 </head>
 
-<body onload="MM_preloadImages('img/c_bot_a_aumentar_over.jpg','img/c_bot_a_reduzir_over.jpg','img/c_bot_a_normal_over.jpg','img/c_bot_a_contraste_over.jpg','img/c_bot_voltar_over.jpg','img/c_c_bot_lupa_over.jpg','img/c_bot_fechar_over.jpg')">
+<body onload="MM_preloadImages('img/c_bot_a_aumentar_over.jpg','img/c_bot_a_reduzir_over.jpg','img/c_bot_a_normal_over.jpg','img/c_bot_a_contraste_over.jpg','img/c_bot_voltar_over.jpg','img/c_bot_lupa_over.jpg','img/c_bot_fechar_over.jpg')">
 
 <div id="detalhe1">
   <table width="590" border="0" cellspacing="0" cellpadding="6">
@@ -104,16 +122,18 @@ function MM_showHideLayers() { //v9.0
       <td align="right" bgcolor="#DBAC36"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','img/bot_fechar_over.jpg',1)"><img src="img/bot_fechar.jpg" alt="fechar" width="20" height="20" id="Image16" onclick="MM_showHideLayers('detalhe1','','hide')" /></a></td>
     </tr>
     <tr>
-      <td bgcolor="#DBAC36"><table width="99%" border="0" cellspacing="0" cellpadding="0"><tr>
-		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacute;mbolo para o transformador:</p></td>
-        </tr>
+      <td bgcolor="#DBAC36">
+	  <table width="99%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/Transformer.png" id="transformer" height="100"></td>
+		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacutembolo para pot&ecirc;ncia ativa:</p></td>
+        </tr>
+		<tr>
+          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/pot_ativa.png" id="pativa" height="300"></td>
         </tr>
       </table></td>
     </tr>
     <tr>
-      <td bgcolor="#DBAC36" class="legenda">Transformador da Subesta&ccedil;&atilde;o</td>
+      <td bgcolor="#DBAC36" class="legenda">Pot&ecirc;ncia ativa</td>
     </tr>
   </table>
 </div>
@@ -126,15 +146,15 @@ function MM_showHideLayers() { //v9.0
     <tr>
       <td bgcolor="#DBAC36"><table width="99%" border="0" cellspacing="0" cellpadding="0">
 	  <tr>
-		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacute;mbolo para as chaves:</p></td>
+		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacutembolo para pot&ecirc;ncia reativa:</p></td>
         </tr>
         <tr>
-          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/switch_open.png" id="chave" height="100"></td>
+          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/pot_reativa.png" id="preativa" height="300"></td>
         </tr>
       </table></td>
     </tr>
     <tr>
-      <td bgcolor="#DBAC36" class="legenda">Chave</td>
+      <td bgcolor="#DBAC36" class="legenda">Pot&ecirc;ncia reativa</td>
     </tr>
   </table>
 </div>
@@ -147,18 +167,61 @@ function MM_showHideLayers() { //v9.0
     <tr>
       <td bgcolor="#DBAC36"><table width="99%" border="0" cellspacing="0" cellpadding="0">
 	  <tr>
-		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacute;mbolo para disjuntor:</p></td>
+		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacutembolo para o gerador:</p></td>
         </tr>
         <tr>
-          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/disjuntor.png" id="disjuntor" height="100"></td>
+          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/generator.png" id="pativa" height="300"></td>
         </tr>
       </table></td>
     </tr>
     <tr>
-      <td bgcolor="#DBAC36" class="legenda">Disjuntor</td>
+      <td bgcolor="#DBAC36" class="legenda">Gerador S&iacute;ncrono</td>
     </tr>
   </table>
 </div>
+
+<div id="detalhe4">
+  <table width="590" border="0" cellspacing="0" cellpadding="6">
+    <tr>
+      <td align="right" bgcolor="#DBAC36"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','img/bot_fechar_over.jpg',1)"><img src="img/bot_fechar.jpg" alt="fechar" width="20" height="20" id="Image16" onclick="MM_showHideLayers('detalhe4','','hide')" /></a></td>
+    </tr>
+    <tr>
+      <td bgcolor="#DBAC36"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacutembolo para Reat&acirc;ncia capacitiva:</p></td>
+        </tr>
+        <tr>
+          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/capacitor.png" id="pativa" height="300"></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td bgcolor="#DBAC36" class="legenda">Reat&acirc;ncia capacitiva</td>
+    </tr>
+  </table>
+</div>
+<div id="detalhe5">
+  <table width="590" border="0" cellspacing="0" cellpadding="6">
+    <tr>
+      <td align="right" bgcolor="#DBAC36"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','img/bot_fechar_over.jpg',1)"><img src="img/bot_fechar.jpg" alt="fechar" width="20" height="20" id="Image16" onclick="MM_showHideLayers('detalhe5','','hide')" /></a></td>
+    </tr>
+    <tr>
+      <td bgcolor="#DBAC36"><table width="99%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+		<td bgcolor="#FFFFFF" class="txtamarelo"><br/><p style = "text-indent: 50px">S&iacutembolo para Reat&acirc;ncia indutiva:</p></td>
+        </tr>
+        <tr>
+          <td height="400" bgcolor="#FFFFFF" align="center"><img src="img/reactor.png" id="pativa" height="300"></td>
+        </tr>
+      </table></td>
+    </tr>
+    <tr>
+      <td bgcolor="#DBAC36" class="legenda">Reat&acirc;ncia indutiva</td>
+    </tr>
+  </table>
+</div>
+
+
 
 <table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
   <tr>
@@ -174,7 +237,7 @@ function MM_showHideLayers() { //v9.0
         <td width="3"><img src="img/c_separador_acess.jpg" alt="" width="3" height="25" border="0"/></td>
         <td width="25"><a href="#" onclick="setActiveStyleSheet('sc1'); return false; " onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image11','','img/c_bot_a_normal_over.jpg',1)"><img src="img/c_bot_a_normal.jpg" alt="Restaurar fonte" width="25" height="25" id="Image11" border="0"/></a></td>
         <td width="3"><img src="img/c_separador_acess.jpg" alt="" width="3" height="25" border="0"/></td>
-        <td><a href="introducao.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image12','','img/c_bot_a_contraste_over.jpg',1)"><img src="img/c_bot_a_contraste.jpg" alt="Aumentar contraste" width="30" height="25" id="Image12" border="0"/></a></td>
+        <td><a href="introducao2.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image12','','img/c_bot_a_contraste_over.jpg',1)"><img src="img/c_bot_a_contraste.jpg" alt="Aumentar contraste" width="30" height="25" id="Image12" border="0"/></a></td>
       </tr>
     </table></td>
   </tr>
@@ -211,7 +274,7 @@ function MM_showHideLayers() { //v9.0
           <td align="center"><img src="img/c_img_barra3_topo.jpg" width="680" height="15" border="0"/></td>
         </tr>
         </table>
-      <span class="tit_interna">SUBESTA&Ccedil;&Atilde;O COM ARRANJO DE BARRAMENTO SIMPLES</span><br />
+      <span class="tit_interna">SUBESTA&Ccedil;&Atilde;O COM ARRANJO DE BARRAMENTO DUPLO</span><br />
       <br />
       <table width="585" border="0" cellspacing="0" cellpadding="0" style="table-layout:fixed;">
         <tr>
@@ -220,38 +283,32 @@ function MM_showHideLayers() { //v9.0
 		<tr>
 			<td class="txt">
 			</br>
-			<p><!-- style = "text-align: justify; text-indent: 50px"-->A subesta&ccedil;&atilde;o tem como objetivo principal atender os consumidores que estejam atrelados a seu sistema de distribui&ccedil;&atilde;o, dessa forma a pot&ecirc;ncia de entrada no <b>transformador da subesta&ccedil;&atilde;o</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image20','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="transformador  da subesta&ccedil;&atilde;o" width="15" height="15" id="Image20" onclick="MM_showHideLayers('detalhe1','','show')" border="0"/></a> deve suficiente para suprir a demanda de energia. As subesta&ccedil;&otilde;es de energia el&eacute;trica apresentam diversas configura&ccedil;&otilde;es de barramento denominadas arranjos.</p>
-
+			<p> <!--style = "text-align: justify; text-indent: 50px"-->Um cliente geralmente &eacute; interpretado pelos s&iacute;mbolos de consumo de <b>pot&ecirc;ncia ativa</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image20','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="pot&ecirc;ncia ativa" width="15" height="15" id="Image20" onclick="MM_showHideLayers('detalhe1','','show')" border="0"/></a> e <b>pot&ecirc;ncia reativa</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="pot&ecirc;ncia reativa"  width="15" height="15" id="Image19" onclick="MM_showHideLayers('detalhe2','','show')" border="0"/></a>, sendo ambas taxadas pela distribuidora. No entanto, o consumo pot&ecirc;ncia reativa causa maiores custos para o sistema sendo repassados para o cliente. 
+			</p>
+			<p>Dessa forma o sistema fornece recursos de forma a reduzir o consumo, sendo estes:
+			</p>
 			</td>
 		</tr>
 		<tr>
 			<td class="txt">
-			<p><!-- style = "text-align: justify; text-indent: 50px"-->Este simulador tem o objetivo de emular o comportamento de um arranjo de barramento simples. O arranjo de barramento simples &eacute; composto por apenas uma barra, podendo ser cont&iacute;nua ou seccionada por <b>chaves</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image18','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="chaves" width="15" height="15" id="Image18" onclick="MM_showHideLayers('detalhe2','','show')" border="0"/></a>, que se ramificar&aacute; para cada consumidor. Cada consumidor se apresenta conectado a esta barra por apenas um <b>disjuntor</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha.<a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image19','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="disjuntor" width="15" height="15" id="Image19" onclick="MM_showHideLayers('detalhe3','','show')" border="0"/></a>
+			
+			<p> <!--style = "text-align: justify; text-indent: 50px"--><b> &bull; Gerador</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image21','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="gerador" width="15" height="15" id="Image21" onclick="MM_showHideLayers('detalhe3','','show')" border="0"/></a> - o gerador &eacute; uma m&aacute;quina capaz de fornecer pot&ecirc;ncia para atender uma carga no subsistema da subesta&ccedil;ão ou o sistema em geral, o gerador tamb&eacute;m pode fornecer pot&ecirc;ncia reativa, por&eacute;m, para fins did&aacute;ticos, deixaremos por conta de outros recursos do sistema e ser&aacute; considerada apenas a pot&ecirc;ncia ativa.
+			</p>
+			
+			<p> <!--style = "text-align: justify; text-indent: 50px"--><b> &bull; Reat&acirc;ncia capacitiva</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image22','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="condensador" width="15" height="15" id="Image22" onclick="MM_showHideLayers('detalhe4','','show')" border="0"/></a> - representada como banco de capacitores, &eacute; um elemento acumulador de energia e contribui negativamente para pot&ecirc;ncia reativa, sendo muito utilizado para reduzir a demanda de pot&ecirc;ncia reativa de m&aacute;quinas el&eacute;tricas.
+			</p>
+			
+			<p> <!--style = "text-align: justify; text-indent: 50px"--><b> &bull; Reat&acirc;ncia indutiva</b>, para lembrar de seu s&iacute;mbolo aperte na lupinha <a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image23','','img/c_bot_lupa_over.jpg',1)"><img src="img/c_bot_lupa.jpg" alt="detalhes" title="reator" width="15" height="15" id="Image23" onclick="MM_showHideLayers('detalhe5','','show')" border="0"/></a> - igualmente ao capacitor este recurso tamb&eacute;m &eacute; um acumulador de energia, por&eacute;m contribui de forma positiva para a pot&ecirc;ncia reativa do sistema, sendo utilizados para controle de fluxo e em casos espec&iacute;ficos de sobrecarga do sistema.
 			</p>
 			</td>
 		</tr>
 		<tr><td>&nbsp;</td>
 		</tr>
 		
-		<table width="585" border="1" cellspacing="0" cellpadding="4">
-			<tr>
-				<td class="txt">
-				As simula&ccedil;&otilde;es do Subesta&ccedil;&atilde;o com arranjo de barramento simples s&atilde;o feitas on-line e em tempo real utilizando o Scilab (<a href="http://www.scilab.org/" target="_blank">http://www.scilab.org/</a>). O Scilab interage com o Maxwell para poder executar as suas fun&ccedil;&otilde;es a partir deste sistema atrav&eacute;s da Internet.
-				</br></br>
-				O que &eacute; o Scilab? Veja a resposta na sua p&aacute;gina <a href="http://www.scilab.org/scilab/about" target="_blank">http://www.scilab.org/scilab/about</a>.
-				</br></br>
-				<span class="scilab">What is Scilab?</span>
-				</br></br>
-				Scilab is free and open source software for numerical computation providing a powerful computing environment for engineering and scientific applications. 
-				Scilab is released as open source under the <a href="http://www.scilab.org/scilab/license" target="_blank">CeCILL license</a> (GPL compatible), and is <a href="http://www.scilab.org/download" target="_blank">available for download</a> free of charge. Scilab is available under GNU/Linux, Mac OS X and Windows XP/Vista/7/8 (<a href="http://www.scilab.org/download/requirements" target="_blank">see system requirements</a>).
-				</br>
-				</td>
-			</tr>
-		</table>
         <table height="120" width="600" border="0" cellspacing="0" cellpadding="4">
 		<tr>
-			<td align="left" valign="bottom"><p><a href="a_index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','img/c_bot_voltar_over.jpg',1)"><img src="img/c_bot_voltar.jpg" alt="voltar" width="15" height="28" id="Image15" border="0"/></a></p></td>
-			<td align="right" valign="bottom"><p><a href="a_introducao2.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image17','','img/c_bot_avancar_over.jpg',1)"><img src="img/c_bot_avancar.jpg" alt="voltar" width="15" height="28" id="Image17" border="0"/></a></p></td>
+			<td align="left" valign="bottom"><p><a href="a_introducao.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','img/c_bot_voltar_over.jpg',1)"><img src="img/c_bot_voltar.jpg" alt="voltar" width="15" height="28" id="Image15" border="0"/></a></p></td>
+			<td align="right" valign="bottom"><p><a href="index_SEduplo.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image17','','img/c_bot_avancar_over.jpg',1)"><img src="img/c_bot_avancar.jpg" alt="voltar" width="15" height="28" id="Image17" border="0"/></a></p></td>
 		</tr>
 		</table>
     </table></td>
