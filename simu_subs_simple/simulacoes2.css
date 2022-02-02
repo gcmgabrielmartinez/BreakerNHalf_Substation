@@ -1,0 +1,84 @@
+@charset "utf-8";
+.tit_1 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 26px;
+	color: #FFF;
+}
+.tit_capa {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #dead35;
+	text-decoration: none;
+}
+.branco_18 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: normal;
+	color: #FFF;
+	text-decoration: none;
+}
+.branco_14 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: #FFF;
+}
+.tit_interna {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #DDAE38;
+	text-decoration: none;
+}
+.tit_internarodape {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #DDAE38;
+	text-decoration: none;
+}
+.azul_14 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	color: #010A1B;
+	text-decoration: none;
+	text-align: left;
+}
+.txt {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 16px;
+	color: #003160;
+	text-decoration: none;
+	text-align: left;
+}
+.scilab{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 17px;
+	font-weight: bold;
+	color: #003160;
+	text-decoration: none;
+	text-align: left;
+}
+.azul_11 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #010A1B;
+	text-decoration: none;
+}
+.amarelo_11 {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #DDAE38;
+	text-decoration: none;
+}
+.legenda {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 13px;
+	font-weight: normal;
+	color: #010A1B;
+	text-decoration: none;
+}

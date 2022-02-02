@@ -1,0 +1,795 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>SUBESTA&Ccedil;&Atilde;O COM ARRANJO DE BARRAMENTO SIMPLES</title>
+<style type="text/css">
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #010A1B;
+}
+</style>
+<link href="simulacoes.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+a:hover {
+	color: #E1AA33;
+}
+#detalhe {
+	position: absolute;
+	width: 200px;
+	height: 115px;
+	z-index: 1;
+	visibility: hidden;
+	left: 344px;
+	top: 17px;
+}
+
+
+
+</style>
+<script type="text/javascript">
+function MM_preloadImages() { //v3.0
+  var d=document; 
+  if(d.images){ 
+		if(!d.MM_p) d.MM_p=new Array();
+		var i,j=d.MM_p.length,a=MM_preloadImages.arguments; 
+		for(i=0; i<a.length; i++)
+			if (a[i].indexOf("#")!=0){ 
+			d.MM_p[j]=new Image; 
+			d.MM_p[j++].src=a[i];	
+	}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; 
+  for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+function MM_showHideLayers() { //v9.0
+  var i,p,v,obj,args=MM_showHideLayers.arguments;
+  for (i=0; i<(args.length-2); i+=3) 
+  with (document) if (getElementById && ((obj=getElementById(args[i]))!=null)) { v=args[i+2];
+    if (obj.style) { obj=obj.style; v=(v=='show')?'visible':(v=='hide')?'hidden':v; }
+    obj.visibility=v; }
+}
+
+</script>
+<script>
+
+var onent=false;
+var on1=false;
+var on2=false;
+var on3=false;
+var on4=false;
+
+function ligaDisjEnt(endereco){
+	if(!onent){
+		if(chaveSubs1.value !="FECHADO"){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else if(chaveSubs2.value !="FECHADO"){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else{
+		document.getElementById(endereco).src="img/S2on.png";
+		onent=true;
+		}
+	}
+	else{
+		document.getElementById(endereco).src="img/S2off.png";
+		onent=false;
+	}
+}
+function ligaDisj1(endereco){
+	if(!on1){
+		if((chaveCliente1_1.value !="FECHADO" )){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else if(chaveCliente1_2.value !="FECHADO"){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else{
+		document.getElementById(endereco).src="img/S2on.png";
+		on1=true;
+		}
+	}
+	else{
+		document.getElementById(endereco).src="img/S2off.png";
+		on1=false;
+	}
+}
+function ligaDisj2(endereco){
+	if(!on2){
+		if((chaveCliente2_1.value !="FECHADO" )){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else if(chaveCliente2_2.value !="FECHADO"){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else{
+		document.getElementById(endereco).src="img/S2on.png";
+		on2=true;
+		}
+	}
+	else{
+		document.getElementById(endereco).src="img/S2off.png";
+		on2=false;
+	}
+}
+function ligaDisj3(endereco){
+	if(!on3){
+		if((chaveCliente3_1.value !="FECHADO" )){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else if(chaveCliente3_2.value !="FECHADO"){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else{
+		document.getElementById(endereco).src="img/S2on.png";
+		on3=true;
+		}
+	}
+	else{
+		document.getElementById(endereco).src="img/S2off.png";
+		on3=false;
+	}
+}
+function ligaDisj4(endereco){
+	if(!on4){
+		if((chaveCliente4_1.value !="FECHADO" )){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else if(chaveCliente4_2.value !="FECHADO"){
+		alert("Certifique-se de que as chaves estejam ligadas");
+		}
+		else{
+		document.getElementById(endereco).src="img/S2on.png";
+		on4=true;
+		}
+	}
+	else{
+		document.getElementById(endereco).src="img/S2off.png";
+		on4=false;
+	}
+}
+
+function ligaChaveEnt(){
+	if(onent){
+		alert("Certifique-se de desligar o disjuntor antes de alterar a posi&atilde;ão da chave")
+	}
+}
+function ligaChave1(){
+	if(on1){
+		alert("Certifique-se de desligar o disjuntor antes de alterar a posi&atilde;ão da chave")
+	}
+}
+function ligaChave2(){
+	if(on2){
+		alert("Certifique-se de desligar o disjuntor antes de alterar a posi&atilde;ão da chave")
+	}
+}
+function ligaChave3(){
+	if(on3){
+		alert("Certifique-se de desligar o disjuntor antes de alterar a posi&atilde;ão da chave")
+	}
+}
+function ligaChave4(){
+	if(on4){
+		alert("Certifique-se de desligar o disjuntor antes de alterar a posi&atilde;ão da chave")
+	}
+}
+
+
+function ChaveimgEnt1(){
+	if(chaveSubs1.value !="ABERTO"){document.getElementById('chaveEnt1').src="img/switch_on.png";}
+	else{document.getElementById('chaveEnt1').src="img/switch_open.png";}	
+}
+function ChaveimgEnt2(){
+	if(chaveSubs2.value !="ABERTO"){document.getElementById('chaveEnt2').src="img/switch_on.png";}
+	else{document.getElementById('chaveEnt2').src="img/switch_open.png";}	
+}
+
+function ChaveimgC11(){
+	if(chaveCliente1_1.value !="ABERTO"){document.getElementById('chave1_1').src="img/switch_on.png";}
+	else{document.getElementById('chave1_1').src="img/switch_open.png";}	
+}
+function ChaveimgC12(){
+	if(chaveCliente1_2.value !="ABERTO"){document.getElementById('chave1_2').src="img/switch_on.png";	}
+	else{document.getElementById('chave1_2').src="img/switch_open.png";}	
+}
+
+function ChaveimgC21(){
+	if(chaveCliente2_1.value !="ABERTO"){document.getElementById('chave2_1').src="img/switch_on.png";}
+	else{document.getElementById('chave2_1').src="img/switch_open.png";}	
+}
+function ChaveimgC22(){
+	if(chaveCliente2_2.value !="ABERTO"){document.getElementById('chave2_2').src="img/switch_on.png";	}
+	else{document.getElementById('chave2_2').src="img/switch_open.png";}	
+}
+
+function ChaveimgC31(){
+	if(chaveCliente3_1.value !="ABERTO"){document.getElementById('chave3_1').src="img/switch_on.png";}
+	else{document.getElementById('chave3_1').src="img/switch_open.png";}	
+}
+function ChaveimgC32(){
+	if(chaveCliente3_2.value !="ABERTO"){document.getElementById('chave3_2').src="img/switch_on.png";	}
+	else{document.getElementById('chave3_2').src="img/switch_open.png";}	
+}
+
+function ChaveimgC41(){
+	if(chaveCliente4_1.value !="ABERTO"){document.getElementById('chave4_1').src="img/switch_on.png";}
+	else{document.getElementById('chave4_1').src="img/switch_open.png";}	
+}
+function ChaveimgC42(){
+	if(chaveCliente4_2.value !="ABERTO"){document.getElementById('chave4_2').src="img/switch_on.png";	}
+	else{document.getElementById('chave4_2').src="img/switch_open.png";}	
+}
+
+
+
+
+function calcula_pot_ent(){
+	var P1 = parseInt(document.getElementById('P1').value);
+	var P2 = parseInt(document.getElementById('P2').value);
+	var P3 = parseInt(document.getElementById('P3').value);
+	var P4 = parseInt(document.getElementById('P4').value);
+	
+	var Q1 = parseInt(document.getElementById('Q1').value);
+	var Q2 = parseInt(document.getElementById('Q2').value);
+	var Q3 = parseInt(document.getElementById('Q3').value);
+	var Q4 = parseInt(document.getElementById('Q4').value);
+	
+	var G1 = parseInt(document.getElementById('G1').value);
+	var G2 = parseInt(document.getElementById('G2').value);
+	var G3 = parseInt(document.getElementById('G3').value);
+	var G4 = parseInt(document.getElementById('G4').value);
+	
+	var L1 = parseInt(document.getElementById('L1').value);
+	var L2 = parseInt(document.getElementById('L2').value);
+	var L3 = parseInt(document.getElementById('L3').value);
+	var L4 = parseInt(document.getElementById('L4').value);
+	
+	var C1 = parseInt(document.getElementById('C1').value);
+	var C2 = parseInt(document.getElementById('C2').value);
+	var C3 = parseInt(document.getElementById('C3').value);
+	var C4 = parseInt(document.getElementById('C4').value);
+	
+	if((chaveSubs1.value !="FECHADO" || !onent)){
+		ksubs = 0; 
+		document.getElementById('P1').value = 0;
+		document.getElementById('P2').value = 0;
+		document.getElementById('P3').value = 0;
+		document.getElementById('P4').value = 0;
+		
+		document.getElementById('Q1').value = 0;
+		document.getElementById('Q2').value = 0;
+		document.getElementById('Q3').value = 0;
+		document.getElementById('Q4').value = 0;
+		
+		document.getElementById('G1').value = 0;
+		document.getElementById('G2').value = 0;
+		document.getElementById('G3').value = 0;
+		document.getElementById('G4').value = 0;
+		
+		document.getElementById('L1').value = 0;
+		document.getElementById('L2').value = 0;
+		document.getElementById('L3').value = 0;
+		document.getElementById('L4').value = 0;
+		
+		document.getElementById('C1').value = 0;
+		document.getElementById('C2').value = 0;
+		document.getElementById('C3').value = 0;
+		document.getElementById('C4').value = 0;
+	}
+	else if(chaveSubs2.value !="FECHADO" || !onent){
+		ksubs = 0;
+		document.getElementById('P1').value = 0;
+		document.getElementById('P2').value = 0;
+		document.getElementById('P3').value = 0;
+		document.getElementById('P4').value = 0;
+	}
+	else{
+		ksubs = 1*onent;
+	}	
+	
+	if((chaveCliente1_1.value !="FECHADO" || !on1)){
+		k1 = 0; 
+		document.getElementById('P1').value = 0;
+		document.getElementById('Q1').value = 0;
+		document.getElementById('G1').value = 0;
+		document.getElementById('L1').value = 0;
+		document.getElementById('C1').value = 0;
+	}
+	else if(chaveCliente1_2.value !="FECHADO" || !on1){
+		k1 = 0; 
+		document.getElementById('P1').value = 0;
+		document.getElementById('Q1').value = 0;
+		document.getElementById('G1').value = 0;
+		document.getElementById('L1').value = 0;
+		document.getElementById('C1').value = 0;
+	}
+	else{
+		k1 = 1*on1;
+	}
+	
+	if((chaveCliente2_1.value !="FECHADO" || !on2)){
+		k2 = 0; 
+		document.getElementById('P2').value = 0;
+		document.getElementById('Q2').value = 0;
+		document.getElementById('G2').value = 0;
+		document.getElementById('L2').value = 0;
+		document.getElementById('C2').value = 0;
+	}
+	else if(chaveCliente2_2.value !="FECHADO" || !on2){
+		k2 = 0; 
+		document.getElementById('P2').value = 0;
+		document.getElementById('Q2').value = 0;
+		document.getElementById('G2').value = 0;
+		document.getElementById('L2').value = 0;
+		document.getElementById('C2').value = 0;
+	}
+	else{
+		k2 = 1*on2;
+	}
+	
+	if((chaveCliente3_1.value !="FECHADO" || !on3)){
+		k3 = 0;
+		document.getElementById('P3').value = 0;
+		document.getElementById('Q3').value = 0;
+		document.getElementById('G3').value = 0;
+		document.getElementById('L3').value = 0;
+		document.getElementById('C3').value = 0;
+	}
+	else if(chaveCliente3_2.value !="FECHADO" || !on3){
+		k3 = 0;
+		document.getElementById('P3').value = 0;
+		document.getElementById('Q3').value = 0;
+		document.getElementById('G3').value = 0;
+		document.getElementById('L3').value = 0;
+		document.getElementById('C3').value = 0;
+	}
+	else{
+		k3 = 1*on3;
+	}
+	
+	if((chaveCliente4_1.value !="FECHADO" || !on4)){
+		k4 = 0;
+		document.getElementById('P4').value = 0;
+		document.getElementById('Q4').value = 0;
+		document.getElementById('G4').value = 0;
+		document.getElementById('L4').value = 0;
+		document.getElementById('C4').value = 0;
+	}
+	else if(chaveCliente4_2.value !="FECHADO" || !on4){
+		k4 = 0;
+		document.getElementById('P4').value = 0;
+		document.getElementById('Q4').value = 0;
+		document.getElementById('G4').value = 0;
+		document.getElementById('L4').value = 0;
+		document.getElementById('C4').value = 0;
+	}
+	else{
+		k4 = 1*on4;
+	}
+	
+	
+	if((document.getElementById('P1').value != 0)){
+		document.getElementById("P1").style.border = '2px solid #49E20E';
+	} else{document.getElementById("P1").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('P2').value != 0)){
+		document.getElementById("P2").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("P2").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('P3').value != 0)){
+		document.getElementById("P3").style.border = '2px solid #49E20E';
+	} else{document.getElementById("P3").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('P4').value!= 0)){
+		document.getElementById("P4").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("P4").style.border = '1px solid #C0C0C0';}
+	
+	if((document.getElementById('Q1').value != 0)){
+		document.getElementById("Q1").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("Q1").style.border = '1px solid #C0C0C0';}
+	
+	if((document.getElementById('Q2').value != 0)){
+		document.getElementById("Q2").style.border = '2px solid #49E20E';
+	} else{document.getElementById("Q2").style.border = '1px solid #C0C0C0';}
+	
+	if((document.getElementById('Q3').value != 0)){
+		document.getElementById("Q3").style.border = '2px solid #49E20E';
+	} else{		document.getElementById("Q3").style.border = '1px solid #C0C0C0';}
+	
+	if((document.getElementById('Q4').value != 0)){
+		document.getElementById("Q4").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("Q4").style.border = '1px solid #C0C0C0';}
+		
+	if((document.getElementById('G1').value != 0)){
+		document.getElementById("G1").style.border = '2px solid #49E20E';
+	} else{document.getElementById("G1").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('G2').value != 0)){
+		document.getElementById("G2").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("G2").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('G3').value != 0)){
+		document.getElementById("G3").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("G3").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('G4').value != 0)){
+		document.getElementById("G4").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("G4").style.border = '1px solid #C0C0C0';}
+	
+	if((document.getElementById('L1').value != 0)){
+		document.getElementById("L1").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("L1").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('L2').value != 0)){
+		document.getElementById("L2").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("L2").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('L3').value != 0)){
+		document.getElementById("L3").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("L3").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('L4').value != 0)){
+		document.getElementById("L4").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("L4").style.border = '1px solid #C0C0C0';}
+	
+	if((document.getElementById('C1').value != 0)){
+		document.getElementById("C1").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("C1").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('C2').value != 0)){
+		document.getElementById("C2").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("C2").style.border = '1px solid #C0C0C0';}
+	if((document.getElementById('C3').value != 0)){
+		document.getElementById("C3").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("C3").style.border = '1px solid #C0C0C0';	}
+	if((document.getElementById('C4').value != 0)){
+		document.getElementById("C4").style.border = '2px solid #49E20E';
+	} else{	document.getElementById("C4").style.border = '1px solid #C0C0C0';}
+	
+	
+//verifyNAN();======================================================================
+	
+	if(isNaN(P1)){P1=0;}
+	if(isNaN(P2)){P2=0;}
+	if(isNaN(P3)){P3=0;}
+	if(isNaN(P4)){P4=0;}
+
+	if(isNaN(Q1)){Q1=0;}
+	if(isNaN(Q2)){Q2=0;}
+	if(isNaN(Q3)){Q3=0;}
+	if(isNaN(Q4)){Q4=0;}
+
+	if(isNaN(G1)){G1=0;}
+	if(isNaN(G2)){G2=0;}
+	if(isNaN(G3)){G3=0;}
+	if(isNaN(G4)){G4=0;}
+
+	if(isNaN(L1)){L1=0;}
+	if(isNaN(L2)){L2=0;}
+	if(isNaN(L3)){L3=0;}
+	if(isNaN(L4)){L4=0;}
+	
+	if(isNaN(C1)){C1=0;}
+	if(isNaN(C2)){C2=0;}
+	if(isNaN(C3)){C3=0;}
+	if(isNaN(C4)){C4=0;}
+	
+//========================================================================================
+
+	
+	Sumkw = ksubs*( k1*(P1 - G1) + k2*(P2 - G2) + k3*(P3 - G3) + k4*(P4 - G4));
+	
+	document.getElementById('Psub').value = Sumkw;
+	
+	Sumkvar = ksubs*( k1*(Q1 + L1 - C1) + k2*(Q2 + L2 - C2) + k3*(Q3 + L3 - C3) + k4*(Q4 + L4 - C4));
+	
+	document.getElementById('Qsub').value = Sumkvar;
+	
+	if(Sumkw < 0){document.getElementById('condition').src="img/generation_arrow.png";	}
+	else if(Sumkw>0){document.getElementById('condition').src="img/consume_arrow.png";}
+	else{document.getElementById('condition').src="img/no_consume.png";}
+	
+}
+</script>
+
+</head>
+<body onload ="MM_preloadImages('img/bot_a_aumentar_over.jpg','img/bot_a_reduzir_over.jpg','img/bot_a_normal_over.jpg','img/bot_a_contraste_over.jpg','img/bot_voltar_over.jpg','img/bot_lupa_over.jpg','img/bot_fechar_over.jpg')">
+
+<div id="detalhe">
+	<table width="590" border="0" cellspacing="0" cellpadding="6">
+	<tr>
+		<td align="right" bgcolor="#DBAC36"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image16','','img/bot_fechar_over.jpg',1)">
+		<img src="img/bot_fechar.jpg" border="0" alt="fechar" width="20" height="20" id="Image16" onclick="MM_showHideLayers('detalhe','','hide')"/></a></td>
+	</tr>
+	
+	<tr>
+      <td bgcolor="#DBAC36" >
+		<table width="99%" border="0" cellspacing="0" cellpadding="2">
+        <tr>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+	
+          <td bgcolor="#FFFFFF" class="txtamarelo"><br/>Informa&ccedil;&otilde;es:<br/><br/></td>
+        </tr>
+		<tr>
+			<td bgcolor="#FFFFFF">&nbsp;</td>
+          <td bgcolor="#FFFFFF" class="txtp">&bull; Para ligar o disjuntor, feche as chaves que se encontram nas extremidades do mesmo .<br/><br/></td>
+        </tr>
+		<tr>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF" class="txtp">&bull; N&atilde;o opere as chaves enquanto o respectivo disjuntor estiver ligado. <br/><br/></td>
+		</tr>
+		<tr>
+		<td bgcolor="#FFFFFF">&nbsp;</td>
+        <td bgcolor="#FFFFFF" class="txtp">&bull; Aperte o bot&atilde;o "Verificar" para o c&aacute;lculo do fluxo de pot&ecirc;ncia para o sistema configurado pelo chaveamento. <br/><br/></td>
+        </tr>
+		</table></td>
+	 
+    </tr>
+	<tr>
+      <td bgcolor="#DBAC36" class="legenda"></td>
+    </tr>
+	</table>
+</div>
+
+<table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="190"><img src="img/logo_interna.jpg" width="190" height="65" /></td>
+    <td width="414" align="center" valign="top" background="img/bg_capa_topo.jpg"><br />
+    <span class="branco_14">SIMULA&Ccedil;&Otilde;ES EM ENGENHARIA EL&Eacute;TRICA</span></td> 
+    <td width="136" align="right" valign="top" background="img/bg_topo_interna.jpg"><table width="130" border="0" cellspacing="0" cellpadding="0">
+     
+    </table></td>
+  </tr>
+</table>
+
+<table width="740" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+	<td width="60" valign="top" background="img/img_barra2_bg.jpg" bgcolor="#000918">
+	<table width="60" border="0" cellspacing="0" cellpadding="0">
+      <tr><td><img src="img/img_barra2_topo.jpg" width="60" height="17" /></td></tr>
+      <tr><td align="center" valign="top"><p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p>&nbsp;</p>
+          <p><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','img/bot_voltar_over.jpg',1)"></a></p>
+          <p>&nbsp;</p>
+          <p><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image14','','img/bot_info_over.jpg',1)"><img src="img/bot_info.jpg" alt="detalhes" width="22" height="22" id="Image14" onclick="MM_showHideLayers('detalhe','','show')" border="0"/></a></p>
+          <p>&nbsp;</p></td></tr>
+
+    </table>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+	</td>
+	
+	<td align="center" valign="top" background="img/img_barra3_bg.jpg" width="680">
+	<table width="680" border="0" align="left" cellpadding="0" cellspacing="0">
+			<tr>
+				<td align="center"><img src="img/img_barra3_topo.jpg" width="680" height="15" /></td>
+			</tr>
+	</table>
+	<table width="585" border="0" cellspacing="0" cellpadding="0" >
+			<tr > <td align="center" valign="top"><span class="tit_interna" >SUBESTA&Ccedil;&Atilde;O COM ARRANJO DE BARRAMENTO SIMPLES</span><br/><br/></td></tr>
+			
+			<tr>
+			<td align="center"><span class="azul_14">SIMULADOR</span></td>
+			</tr>
+			<tr>
+			<td class="txt">
+		<div id="enunciado" class="txt">
+		</br>
+			<p> <!--style = "text-align: justify;"-->Para obter os valores de entrada da subestação através do cálculo do fluxo de potência, entre com os dados dos clientes, especificando a configuração do barramento :</p> <br/><br/>
+		</div>	</td></tr>
+	</table>
+	
+	<div id="variaveis" class="txt">
+	
+
+	<table align="center" border="0" cellspacing="0" cellpadding="0" background="img/Barramento_simples.png"  width="640px" style="background-repeat:no-repeat;">
+	<map>
+	<area shape="rect" coords="280,10, 370, 50" title="transformador de entrada" />
+	
+	</map>
+	
+	
+				<tr height="60px">
+				  <td width="24%" align="right"> <img id="condition" src="img/no_consume.png" height="30px"></td>
+				  <td width="23%"><input type="text" name="Psub" id="Psub" placeholder = "P Entrada" size="9" readonly /> kW
+				  <br/><br/><input type="text" name="Qsub" id="Qsub" placeholder = "Q Entrada" size="9" readonly /> kVAR</td>
+				  <td width="24%"> &nbsp;</td>
+				  <td width="23%" align="center" onclick="calcula_pot_ent()"><input type="submit" id="enviar" name="enviar" title="Enviar" value="Enviar">
+				  </td>
+				  <td width="6%">&nbsp;</td>
+				</tr>
+				
+				<tr height="25px" valign="top" align="left" >
+					<td>&nbsp;</td> 
+					<td>
+					</td>
+					<td height="25px" align="right" style="padding-right:7px">
+						 <img title ="Chave" id="chaveEnt1" src="img/switch_open.png" height="35px" >
+						 <select id="chaveSubs1" class="div" onclick="ligaChaveEnt()" onchange="ChaveimgEnt1()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+					</td>
+					<td>&nbsp;</td><td>&nbsp;</td>	
+				</tr>
+				<tr height="27px" valign="top" >
+				  <td>&nbsp;</td>
+					<td>&nbsp;</td>
+					<td align="left" style="padding-left:11px"  ><img id="disjEntrada" title="Disjuntor da Entrada" src="img/S2off.png" height="27px" onclick="ligaDisjEnt('disjEntrada')"></td>
+					<td>&nbsp;</td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr height="56px" valign="top" align="left" >
+					<td>&nbsp;</td>
+					<td></td>
+					<td height="23px" valign="top" align="right"  style="padding-right:6px">
+						 <img id="chaveEnt2" src="img/switch_open.png" height="35px" >
+						 <select id="chaveSubs2" class="div" onclick="ligaChaveEnt()" onchange="ChaveimgEnt2()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO" >FECHADO</option>
+						 </select>
+						 </td>
+					<td>&nbsp;</td><td>&nbsp;</td>
+				</tr>
+
+
+				<tr height="37px" width="50px" valign="top" align="right" >
+					<td height="23px" style="padding-right:17px;padding-left:5px">
+						 <select id="chaveCliente1_1" class="div" align="left" onclick="ligaChave1()" onchange="ChaveimgC11()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave1_1" src="img/switch_open.png" height="35px" >
+					</td>
+					<td height="23px" style="padding-right:10px;">
+						 <select id="chaveCliente2_1" class="div" align="left" onclick="ligaChave2()" onchange="ChaveimgC21()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave2_1" src="img/switch_open.png" height="35px" >
+					</td>
+					<td height="23px" style="padding-right:14px;padding-left:6px">
+						 <select id="chaveCliente3_1" class="div" align="left" onclick="ligaChave3()" onchange="ChaveimgC31()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave3_1" src="img/switch_open.png" height="35px" >
+					</td>
+					<td height="23px" style="padding-right:12px;">
+						 <select id="chaveCliente4_1" class="div" align="left" onclick="ligaChave4()" onchange="ChaveimgC41()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave4_1" src="img/switch_open.png" height="35px" >
+					</td>
+					<td>&nbsp;</td>
+					
+				</tr>
+				
+				<tr height="27px" align="right">
+					
+					<td style="padding-right:30px"><img id="disjCliente1" title="Disjuntor do Cliente 1" src="img/S2off.png" height="27px" onclick="ligaDisj1('disjCliente1')"></td>
+					
+					<td style="padding-right:24px"><img id="disjCliente2" title="Disjuntor do Cliente 2" src="img/S2off.png" height="27px" onclick="ligaDisj2('disjCliente2')"></td>
+					
+					<td style="padding-right:28px"><img id="disjCliente3" title="Disjuntor do Cliente 3" src="img/S2off.png" height="27px" onclick="ligaDisj3('disjCliente3')"></td>
+					
+					<td style="padding-right:26px"><img id="disjCliente4" title="Disjuntor do Cliente 4" src="img/S2off.png" height="27px" onclick="ligaDisj4('disjCliente4')"></td>
+					<td>&nbsp;</td>
+				</tr>
+				<tr height="35px" valign="bottom" align="right">
+					<td height="23px" style="padding-right:16px;">
+						 <select id="chaveCliente1_2" class="div" align="left" onclick="ligaChave1()" onchange="ChaveimgC12()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave1_2" src="img/switch_open.png" height="35px" >
+					</td>
+					<td height="23px" style="padding-right:9px;">
+						 <select id="chaveCliente2_2" class="div" align="left" onclick="ligaChave2()" onchange="ChaveimgC22()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave2_2" src="img/switch_open.png" height="35px" >
+					</td>
+					<td height="23px" style="padding-right:13px;padding-left:6px;">
+						 <select id="chaveCliente3_2" class="div" align="left" onclick="ligaChave3()" onchange="ChaveimgC32()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave3_2" src="img/switch_open.png" height="35px" >
+					</td>
+					<td height="23px" style="padding-right:11px;">
+						 <select id="chaveCliente4_2" class="div" align="left" onclick="ligaChave4()" onchange="ChaveimgC42()">
+							<option value="ABERTO">ABERTO</option>
+							<option value="FECHADO">FECHADO</option>
+						 </select>
+						 <img id="chave4_2" src="img/switch_open.png" height="35px" >
+					</td>
+					 <td>&nbsp;</td>
+					
+				</tr>
+				<tr height="120px">
+					<td >&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+				</tr>
+		</table>
+		
+	    <!--http://www.maxwell.vrac.puc-rio.br/24577/--><!--"http://www.maxwell.vrac.puc-rio.br/24599/24599.PHP"--> 
+	   
+			<table border="0" cellspacing="0" cellpadding="0" width="650px" align="center" >
+			<tr height="40px" > <td colspan="4"><b>Carga</b></td></tr>
+			<tr  height="30px" align="right" >
+				<td width="25%" style="padding-right:14px;"><label for="P1">P1=</label><input type="number" id="P1" name="nP1" value="100" size="5" max="99999" min="0" style="border:1px solid #C0C0C0;width:40%">kW</td>
+		    	<td width="25%" style="padding-right:14px;"><label for="P2">P2=</label><input type="number" id="P2" name="nP2" value="0"   size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:40%;">kW</td>
+				<td width="25%" style="padding-right:14px;"><label for="P3">P3=</label><input type="number" id="P3" name="nP3" value="0"   size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:40%;">kW</td>
+				<td width="25%" style="padding-right:14px;"><label for="P4">P4=</label><input type="number" id="P4" name="nP4" value="0"   size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:40%;">kW</td>
+			</tr>                                                        			      
+			<tr height="30px" align="right">                                                                         
+				<td ><label for="Q1">Q1=</label><input type="number" id="Q1" name="nQ1" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+		    	<td><label for="Q2">Q2=</label><input type="number" id="Q2" name="nQ2" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+				<td><label for="Q3">Q3=</label><input type="number" id="Q3" name="nQ3" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+		    	<td  ><label for="Q4">Q4=</label><input type="number" id="Q4" name="nQ4" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+			</tr> 
+			<tr height="40px"> <td colspan="4"> <b>Gera&ccedil;&atilde;o/Recusos do Sistema</b> </td> </tr>
+			<tr height="30px" align="right">                                                                  
+				<td style="padding-right:14px;"><label for="G1">G1=</label><input type="number" id="G1" name="nG1" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:40%;">kW</td>
+		    	<td style="padding-right:14px;"><label for="G2">G2=</label><input type="number" id="G2" name="nG2" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:40%;">kW</td>
+				<td style="padding-right:14px;"><label for="G3">G3=</label><input type="number" id="G3" name="nG3" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:40%;">kW</td>
+		    	<td style="padding-right:14px;"><label for="G4">G4=</label><input type="number" id="G4" name="nG4" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:40%;">kW</td>
+			</tr>                                                                  
+			<tr height="30px" align="right">	                                                               
+				<td><label for="L1">L1=</label><input type="number" id="L1" name="nL1" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+		    	<td><label for="L2">L2=</label><input type="number" id="L2" name="nL2" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+				<td><label for="L3">L3=</label><input type="number" id="L3" name="nL3" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+		    	<td><label for="L4">L4=</label><input type="number" id="L4" name="nL4" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+			</tr>                                                                 
+			<tr height="30px" align="right" style="margin-bottom:20px;">	                                                              
+				<td><label for="C1">C1=</label><input type="number" id="C1" name="nC1" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+		    	<td><label for="C2">C2=</label><input type="number" id="C2" name="nC2" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+				<td><label for="C3">C3=</label><input type="number" id="C3" name="nC3" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+		    	<td><label for="C4">C4=</label><input type="number" id="C4" name="nC4" value="0" size="5" max="99999" min="0" style="border:1px solid #C0C0C0; width:36%;">kVAR</td>
+			</tr>
+			</table>
+	</div>
+	
+
+			<!-- mudar o link para o site final-->
+			<div><br>
+				<a href="javascript:history.back()" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('Image15','','img/bot_voltar_over.jpg',1)"><img src="img/bot_voltar.jpg" alt="voltar" width="15" height="28" id="Image15" border="0" align="left" style="padding-left:20px" /></a></td>
+			</div>	
+
+	</td>
+	</tr>
+</table>
+<p>&nbsp;</p>
+</body>
+</html>
+
+
+<!---- faltando:
+	- entradas para reator e banco de capacitor; (POTENCIAS ou parametros de indutancia e capacitancia?) - ok!
+	- enviar os valores para o programa em scilab; -Nao fazer!
+	- criar "botões" on/off; -ok!
+	- e atrelar a imagem; -ok!
+	- criar a imagem do circuito; -ok!
+	- lógica de chaveamento para os disjuntores; -ok!
+	- lógica de chaveamento para o calculo de potencia; -ok!
+	- aprender <? ?> -ok!
+	- funcao de verificar o envio; -Nao fazer!
+	-->
