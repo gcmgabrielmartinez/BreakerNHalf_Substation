@@ -1,0 +1,7 @@
+<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('lupa','','img/bot_detalhes_over.jpg',1)"><img align="middle"
+ title="Lupinha" width="20px" src="img/bot_detalhes.jpg" border="0" name="lupa" onclick="window.open('lupa.html', '_blank', 'noresisable, notoolbar, height=535, width=743')"></a>
+
+
+
+
+\\Frederico Gutierrez
